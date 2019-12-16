@@ -1,0 +1,22 @@
+/* This pen does not work on mobile devices. Oh yeah and is no way affiliated by South Park and/or its trademark/rights/copyright holders. This is just a fan-based character creator I did for fun. */
+
+body,html{user-select: none;padding:0;margin:0;width:100%;height:100%;background:black;font-family: 'Electrolize', sans-serif;}
+.info {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: white;  
+  a {
+    color: white;
+  }
+}
+
+.legal-stuff {
+  position: fixed;
+  bottom: 10px;
+  left: 50px;
+  color: rgba(255,255,255,0.25);
+  font-size: 9pt;  
+  user-select: none;
+  pointer-events: none;
+}

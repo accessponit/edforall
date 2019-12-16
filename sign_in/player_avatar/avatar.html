@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen Avatar Customizer</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,700'>
+<link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/spectrum.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <link rel="stylesheet" href="css_xp_bar/style.css">
+
+</head>
+
+<body>
+
+  <div class="preview">
+  <div class="preview__header">
+    <h2 class="header__name">You! <span class="header__badge">dashing</span></h2>
+    <a class="header__username" href="southpark.html">Customize Your Own Virtual Avatar!</a>
+  </div>
+  <div class="preview__bottom-bar">
+    <svg class="avatar" id="avatar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 247 247">
+      <title>CodePen Profile Avatar</title>
+      <rect class="avatar__bg" width="247" height="247"/>
+      <path class="avatar__glow--5" d="M247 33a201 201 0 0 0-55-33H56A207 207 0 0 0 0 33v214h247V33z"/>
+      <path class="avatar__glow--4" d="M247 56C214 26 171 7 124 7S33 26 0 56v191h247V56z"/>
+      <path class="avatar__glow--3" d="M247 80A169 169 0 0 0 0 80v167h247V80z"/>
+      <path class="avatar__glow--2" d="M247 105c-30-36-74-59-123-59S30 69 0 105v142h247V105z"/>
+      <path class="avatar__glow--1" d="M247 131a149 149 0 0 0-123-66C72 65 27 91 0 131v116h247V131z"/>
+      <path id="body" class="avatar__body" d="M187 152l-64 37-64-38a117 117 0 0 0-51 96h231c0-40-21-75-52-95z"/>
+      <g class="avatar__head">
+        <g class="avatar__head--positive-diagonal">
+          <path d="M60 124l56 38v-34l-31-20-25 16zM186 74l-56-37v33l31 21 25-17z"/>
+        </g>
+        <g class="avatar__head--middle">
+          <path d="M55 87v24l18-12-18-12zM123 83L98 99l25 17 25-17-25-16zM192 111V87l-18 12 18 12z"/>
+        </g>
+        <g class="avatar__head--negative-diagonal">
+          <path d="M116 70V37L61 74l24 17 31-21zM130 128v33l56-37-25-17-31 21z"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<div id='account-bar-wrapper'>
+    <div id='account-bar'>
+      <div id='currency-bar-name'>You have: 1,337,420 Virtual Points ready!</div>
+      <div id='account-bar-name'><i>"Character Name"</i></div>
+      <div id='account-bar-level'>Level 5</div>
+      <div id='xp-bar'>
+        <div id='xp-bar-fill'>
+          <div id='xp-increase-fx'><div id='xp-increase-fx-flicker'><div class='xp-increase-glow1'></div><div class='xp-increase-glow2'></div><div class='xp-increase-glow3'></div></div><div class='xp-increase-glow2'></div></div>
+        </div>
+      </div>
+      <div id='account-bar-next-level' onclick='doit();' class='btn' id='doit-btn'><i>XP Left: Infinity</i></div>
+    </div>
+  </div>
+
+
+  <script  src="js_xp_bar/index.js"></script>
+
+  <!--
+<div class="settings">
+  <h2 class="settings__header">Settings</h2>
+  <h3>Foreground Colors</h3>
+  <div class="settings__input settings__input--padded">
+    <input type="checkbox" id="syncHead"/>
+    <label for="syncHead" class="label--secondary">Advanced head color controls</label>
+  </div>
+  <div class="settings__input">
+    <input id="body-color" type="text" class="spectrum"/>
+    <label for="body-color" class="label--primary">Body Color</label>
+  </div>
+  <div class="settings__input">
+    <input id="head-color" type="text" class="spectrum"/>
+    <label for="head-color" class="label--primary">Head Color</label>
+  </div>
+  <div class="settings__input">
+    <input id="head-pos-diagonal" type="text" class="spectrum"/>
+    <label for="head-pos-diagonal" class="label--primary">Head Positive Diagonal</label>
+  </div>
+  <div class="settings__input">
+    <input id="head-neg-diagonal" type="text" class="spectrum"/>
+    <label for="head-neg-diagonal" class="label--primary">Head Negative Diagonal</label>
+  </div>
+  <div class="settings__input">
+    <input id="head-middle" type="text" class="spectrum"/>
+    <label for="head-middle" class="label--primary">Head Middle</label>
+  </div>
+  <h3>Background Colors</h3>
+  <div class="settings__input settings__input--padded">
+    <input checked type="checkbox" id="blendBackground"/>
+    <label for="blendBackground" class="label--secondary">Automatically blend background colors</label>
+  </div>
+  <div class="settings__input">
+    <input id="glow1-color" type="text" class="spectrum"/>
+    <label for="glow1-color" class="label--primary">Glow Front</label>
+  </div>
+  <div class="settings__input">
+    <input id="glow2-color" type="text" class="spectrum"/>
+    <label for="glow2-color" class="label--primary">Glow Tier 2</label>
+  </div>
+  <div class="settings__input">
+    <input id="glow3-color" type="text" class="spectrum"/>
+    <label for="glow3-color" class="label--primary">Glow Tier 3</label>
+  </div>
+  <div class="settings__input">
+    <input id="glow4-color" type="text" class="spectrum"/>
+    <label for="glow4-color" class="label--primary">Glow Tier 4</label>
+  </div>
+  <div class="settings__input">
+    <input id="glow5-color" type="text" class="spectrum"/>
+    <label for="glow5-color" class="label--primary">Glow Tier 5</label>
+  </div>
+  <div class="settings__input">
+    <input id="bg-color" type="text" class="spectrum"/>
+    <label for="bg-color" class="label--primary">Glow Back</label>
+  </div>
+</div>
+-->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/spectrum.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/saveSvgAsPng.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+</body>
+
+</html>

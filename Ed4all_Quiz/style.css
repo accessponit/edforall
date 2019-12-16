@@ -1,17 +1,13 @@
 /* || font import */
-/* 
+
 @font-face {
-    font-family: 'harry_pregular';
-    src: url('fonts/harryp-webfont.eot');
-    src: url('fonts/harryp-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/harryp-webfont.woff') format('woff'),
-         url('fonts/harryp-webfont.ttf') format('truetype'),
-         url('fonts/harryp-webfont.svg#harry_pregular') format('svg');
+    font-family: 'Open Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans');
     font-weight: normal;
     font-style: normal;
 
 }
-*/
+
 /* || animations */
 
 @keyframes appear {
@@ -64,7 +60,7 @@ html, body {
 }
 	  
 html {
-  background: orange;
+  background: white;
   font-family: 'helvetica neue', sans-serif;
   font-size: 20px;
 }
@@ -102,8 +98,8 @@ html {
 /* || typography */
 
 h1 {
-  font-family: harry_pregular;
-  color: #ccc;
+  font-family: 'Open Sans';
+  color: #ffffff;
   text-shadow: 1px 1px 5px black;
   font-size: 7rem;
   text-align: right;

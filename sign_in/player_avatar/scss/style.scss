@@ -1,0 +1,244 @@
+// https://codepen.io/guide <3 <3
+$gray-very-light: #ccc;
+$gray-light: #555;
+$gray-medium: #343436;
+$gray-medium-dark: #28282B;
+$gray-dark: #1E1E1E;
+$gray-very-dark: #111;
+
+$blue: #0ebeff;
+$purple: #AE63E4;
+$green: #47CF73;
+$yellow: #fcd000;
+$red: #ff3c41;
+$lightBlue: #76daff;
+
+@font-face {
+  font-family: "TelefonBold";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/telefon-bold.woff");
+  font-weight:700;
+}
+
+@font-face {
+  font-family: "TelefonBlack";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/telefon-black.woff");
+  font-weight:900;
+}
+
+* {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height:100vh;
+  display:flex;
+  font-family: Lato, sans-serif;
+  color: $gray-dark;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-family: Lato;
+  font-weight: 700;
+}
+
+.preview {
+  min-width: 400px;
+  background: $gray-very-dark;
+  flex-grow:1;
+}
+
+.preview__header {
+  background-color:#343338;
+  background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/profile-bg.svg');
+  background-size:cover;
+  text-align:center;
+  padding-top: 50px;
+  padding-bottom: 130px;
+}
+
+.header__name {
+  margin-top:0;
+  font-size: 4rem;
+  font-family: "TelefonBlack", sans-serif;
+  color: white;
+  font-weight:900;
+  margin-bottom: 7.5px;
+}
+
+.header__username {
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.header__badge {
+  font-family: Lato;
+  font-size: .8rem;
+  color:black;
+  background: $yellow;
+  padding: 1px 3px;
+  border-radius: 3px;
+  vertical-align:top;
+  position: relative;
+  top: 15px;
+  font-weight: 700;
+  text-transform:uppercase;
+}
+
+.settings {
+  flex-basis: 37.5%;
+  min-width: 400px;
+  padding:20px;
+}
+
+.preview__bottom-bar {
+  background:$gray-very-dark;
+  height: 90px;
+}
+
+.avatar {
+  height:180px;
+  width: auto;
+  border: 8px solid $gray-very-dark;
+  display:block;
+  margin: 0 auto;
+  transform:translateY( calc(-50% - 8px) );
+}
+
+.avatar__bg {
+  fill:#dc2a7b;
+}
+
+.avatar__glow {
+  &--1 {
+    fill: #FECC5E;
+  }
+}
+
+$avatarBase: #26233B;
+.avatar__head {
+  fill:$avatarBase;
+}
+
+.avatar__body {
+  fill:$avatarBase;
+}
+
+.settings__header {
+  font-family:"TelefonBold";
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top:0;
+}
+.picker, .picker-input {
+  border:0;
+  border-radius: 3px;
+  
+}
+
+// FORGIVE ME FOR I HAVE NESTED SELECTORS 
+// IN THE INTEREST OF THEMING MORE EASILY.
+// MAY THE BEM GODS SMITE ME WHERE I STAND.
+
+.picker-input {
+  background: $gray-very-light;
+  padding: 8px;
+  &.sp-disabled {
+    opacity: .35;
+    & + label {
+      opacity: .35;
+    }
+  }
+  &.sp-active {
+    background: lighten($gray-very-light, 5%);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .sp-preview {
+    border-radius: 3px;
+  }
+}
+
+.picker {
+  background: lighten($gray-very-light, 5%);
+  border-top-left-radius: 0;
+  .sp-palette-container, .sp-picker-container {
+    border:0;
+  }
+  .sp-picker-container {
+    background: $gray-dark;
+  }
+  .sp-input {
+    background:#F3F0EB;
+    border: 3px solid $gray-very-light;
+    margin-bottom: 5px;
+    color: #222;
+  }
+  .sp-cancel {
+    color: $gray-very-light!important; // r u srs? the plugin made me do it
+  }
+  .sp-thumb-el:hover {
+    border-color: $blue;
+  }
+  .sp-choose {
+    background: $green;
+    &:hover {
+      background: darken($green, 5%);
+    }
+    color:white;
+    border:0!important; // sshhhh
+    text-shadow:none!important; // sssssshhhh
+    box-shadow: none!important; // I can feel you juuudginnnggg meee
+    padding: 8px 10px;
+  }
+}
+
+.settings__input {
+  margin-bottom:15px;
+  &--padded {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.label--primary {
+    font-size: .9rem;
+    text-transform:uppercase;
+    font-weight: 400;
+    padding-left: 10px;
+
+}
+
+.label--secondary {
+  color: $gray-light;
+  margin-left: 5px;
+}
+
+
+.save {
+  cursor:pointer;
+  color: white;
+  display:block;
+  border: 0;
+  border-radius: 4px;
+  background: $green;
+  margin: 0 auto;
+  margin-top: 50px;
+  &:hover {
+    background: darken($green, 5%);
+  }
+  font-size: 1.5rem;
+  padding: 15px 20px;
+}
+
+.dl-icon {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  display:inline-block;
+  padding-right: 10px;
+}

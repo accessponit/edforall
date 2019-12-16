@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "TelefonBold";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/telefon-bold.woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "TelefonBlack";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/telefon-black.woff");
+  font-weight: 900;
+}
+* {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: Lato, sans-serif;
+  color: #1E1E1E;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-family: Lato;
+  font-weight: 700;
+}
+
+.preview {
+  min-width: 400px;
+  background: #000;
+  flex-grow: 1;
+}
+
+.preview__header {
+  background-color: #343338;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/186499/profile-bg.svg");
+  background-size: cover;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 130px;
+}
+
+.header__name {
+  margin-top: 0;
+  font-size: 4rem;
+  font-family: "TelefonBlack", sans-serif;
+  color: white;
+  font-weight: 900;
+  margin-bottom: 7.5px;
+}
+
+.header__username {
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.header__badge {
+  font-family: Lato;
+  font-size: .8rem;
+  color: black;
+  background: #fcd000;
+  padding: 1px 3px;
+  border-radius: 3px;
+  vertical-align: top;
+  position: relative;
+  top: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.settings {
+  flex-basis: 37.5%;
+  min-width: 400px;
+  padding: 20px;
+}
+
+.preview__bottom-bar {
+  background: #111;
+  height: 90px;
+}
+
+.avatar {
+  height: 180px;
+  width: auto;
+  border: 8px solid #111;
+  display: block;
+  margin: 0 auto;
+  -webkit-transform: translateY(calc(-50% - 8px));
+          transform: translateY(calc(-50% - 8px));
+}
+
+.avatar__bg {
+  fill: #dc2a7b;
+}
+
+.avatar__glow--1 {
+  fill: #FECC5E;
+}
+
+.avatar__head {
+  fill: #26233B;
+}
+
+.avatar__body {
+  fill: #26233B;
+}
+
+.settings__header {
+  font-family: "TelefonBold";
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.picker, .picker-input {
+  border: 0;
+  border-radius: 3px;
+}
+
+.picker-input {
+  background: #ccc;
+  padding: 8px;
+}
+.picker-input.sp-disabled {
+  opacity: .35;
+}
+.picker-input.sp-disabled + label {
+  opacity: .35;
+}
+.picker-input.sp-active {
+  background: #d9d9d9;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.picker-input .sp-preview {
+  border-radius: 3px;
+}
+
+.picker {
+  background: #d9d9d9;
+  border-top-left-radius: 0;
+}
+.picker .sp-palette-container, .picker .sp-picker-container {
+  border: 0;
+}
+.picker .sp-picker-container {
+  background: #1E1E1E;
+}
+.picker .sp-input {
+  background: #F3F0EB;
+  border: 3px solid #ccc;
+  margin-bottom: 5px;
+  color: #222;
+}
+.picker .sp-cancel {
+  color: #ccc !important;
+}
+.picker .sp-thumb-el:hover {
+  border-color: #0ebeff;
+}
+.picker .sp-choose {
+  background: #47CF73;
+  color: white;
+  border: 0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  padding: 8px 10px;
+}
+.picker .sp-choose:hover {
+  background: #34c864;
+}
+
+.settings__input {
+  margin-bottom: 15px;
+}
+.settings__input--padded {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.label--primary {
+  font-size: .9rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.label--secondary {
+  color: #555;
+  margin-left: 5px;
+}
+
+.save {
+  cursor: pointer;
+  color: white;
+  display: block;
+  border: 0;
+  border-radius: 4px;
+  background: #47CF73;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  padding: 15px 20px;
+}
+.save:hover {
+  background: #34c864;
+}
+
+.dl-icon {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  padding-right: 10px;
+}
